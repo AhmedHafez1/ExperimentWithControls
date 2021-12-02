@@ -1,0 +1,25 @@
+﻿<Window x:Class="ExperimentWithControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExperimentWithControls"
+        mc:Ignorable="d"
+        Title="Experiment With Controls" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Enter a number" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="number" Grid.Column="1" HorizontalAlignment="Center" Text="#" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="numberTextBox" HorizontalAlignment="Left" Margin="10,49,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" 
+                 TextChanged="numberTextBox_TextChanged" PreviewTextInput="numberTextBox_PreviewTextInput"/>
+
+    </Grid>
+</Window>
